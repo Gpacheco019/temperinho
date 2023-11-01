@@ -1,6 +1,6 @@
 import * as S from './styles';
 
-type MainProps = {
+export type MainProps = {
   children: React.ReactNode;
 };
 

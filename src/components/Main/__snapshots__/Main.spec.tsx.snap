@@ -12,7 +12,7 @@ exports[`<Main /> should render the component 1`] = `
 
 .c1 {
   width: 100%;
-  max-width: 130rem;
+  max-width: 4.8rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -38,7 +38,7 @@ exports[`<Main /> should render the component 1`] = `
       class="c1"
     >
       <h1>
-        Next Example
+        Next example
       </h1>
     </div>
   </div>

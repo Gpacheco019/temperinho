@@ -1,18 +1,17 @@
-import { render, screen } from '@testing-library/react';
+import { createSetupToTests } from 'utils';
 
-import Main from './Main';
+import Main, { MainProps } from './Main';
+
+const setup = createSetupToTests<MainProps>(
+  { children: <h1>Next example</h1> },
+  Main
+);
 
 describe('<Main />', () => {
   it('should render the component', () => {
-    const { container } = render(
-      <Main>
-        <h1>Next Example</h1>
-      </Main>
-    );
+    const { container, getByRole } = setup();
 
-    expect(
-      screen.getByRole('heading', { name: /next example/i })
-    ).toBeInTheDocument();
+    expect(getByRole('heading', { name: /next example/i })).toBeInTheDocument();
 
     expect(container).toMatchSnapshot();
   });
